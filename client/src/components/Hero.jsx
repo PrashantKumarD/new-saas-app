@@ -69,7 +69,7 @@ const Hero = () => {
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 pt-4'>
             <button 
               onClick={() => navigate('/ai')} 
-              className='group relative inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-primary rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 min-w-[200px]'
+              className='group relative inline-flex items-center cursor-pointer gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-primary rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 min-w-[200px]'
             >
               <span className='relative z-10'>Start Creating Free</span>
               <ArrowRight className='w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-200'/>
@@ -78,7 +78,7 @@ const Hero = () => {
             
             <button 
               onClick={scrollToAction}
-              className='group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-gray-700 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-xl min-w-[200px]'
+              className='group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-gray-700 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-primary/30 transition-all cursor-pointer duration-300 hover:scale-105 hover:shadow-xl min-w-[200px]'
             >
               <Play className='w-5 h-5 group-hover:scale-110 transition-transform duration-200' />
               <span>See It In Action</span>
