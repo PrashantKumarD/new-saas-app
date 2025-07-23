@@ -1,7 +1,8 @@
 {
-  "name": "client",
+  "name": "creativo-client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Creativo - AI Creative Studio for content creation",
   "type": "module",
   "scripts": {
     "dev": "vite",

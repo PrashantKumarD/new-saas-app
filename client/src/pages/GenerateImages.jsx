@@ -2,6 +2,7 @@ import { Sparkles,Image  } from 'lucide-react'
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useAuth } from '@clerk/clerk-react';
+import toast from 'react-hot-toast';
 
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
@@ -32,6 +33,7 @@ const GenerateImages = () => {
 
         if(data.success){
           setContent(data.content)
+          toast.success('Image successfully generated!')
         }
         else{
           toast.error(data.message)

@@ -32,6 +32,7 @@ const RemoveObject = () => {
 
         if(data.success){
           setContent(data.content)
+          toast.success('Object successfully removed!')
         }
         else{
           toast.error(data.message)
@@ -51,7 +52,18 @@ const RemoveObject = () => {
 
             </div>
             <p className='mt-3 text-sm font-medium'>Upload Image</p>
-            <input onChange={(e)=>setInput(e.target.files[0])} type="file" accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' required />
+            <input 
+              onChange={(e) => {
+                setInput(e.target.files[0])
+                if (e.target.files[0]) {
+                  toast.success('Image uploaded successfully!')
+                }
+              }} 
+              type="file" 
+              accept='image/*' 
+              className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' 
+              required 
+            />
             <p className='mt-3 text-sm font-medium'>Describe Object Name to remove from Image</p>
             <textarea onChange={(e)=>setObject(e.target.value)} value={object}  rows={4} type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200' placeholder='e.g car, person, etc....' required />
           

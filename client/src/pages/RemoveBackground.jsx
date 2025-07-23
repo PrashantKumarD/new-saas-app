@@ -28,6 +28,7 @@ const RemoveBackground = () => {
 
         if(data.success){
           setContent(data.content)
+          toast.success('Background successfully removed!')
         }
         else{
           toast.error(data.message)
@@ -47,7 +48,18 @@ const RemoveBackground = () => {
 
             </div>
             <p className='mt-3 text-sm font-medium'>Upload Image</p>
-            <input onChange={(e)=>setInput(e.target.files[0])} type="file" accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' required />
+            <input 
+              onChange={(e) => {
+                setInput(e.target.files[0])
+                if (e.target.files[0]) {
+                  toast.success('Image uploaded successfully!')
+                }
+              }} 
+              type="file" 
+              accept='image/*' 
+              className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' 
+              required 
+            />
             <p className='text-xs text-gray-500 font-light mt-1'>Supports JPG, PNG, and other image formats</p>
           
           <button disabled={loading} className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>

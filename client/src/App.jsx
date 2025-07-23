@@ -11,9 +11,26 @@ import RemoveObject from './pages/RemoveObject'
 import ReviewResume from './pages/ReviewResume'
 import Community from './pages/Community'
 import { useAuth } from '@clerk/clerk-react'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import {Toaster} from 'react-hot-toast'
+import toast from 'react-hot-toast'
+
 const App = () => {
+  const { isSignedIn } = useAuth()
+  const prevSignedIn = useRef(isSignedIn)
+
+  useEffect(() => {
+    // Check if user just signed in (was not signed in before, now is signed in)
+    if (!prevSignedIn.current && isSignedIn) {
+      toast.success('Successfully logged in!')
+    }
+    // Check if user just signed out (was signed in before, now is not signed in)
+    if (prevSignedIn.current && !isSignedIn) {
+      toast.success('Successfully signed out!')
+    }
+    prevSignedIn.current = isSignedIn
+  }, [isSignedIn])
+
   return (
     <div>
       <Toaster/>

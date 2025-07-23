@@ -26,6 +26,7 @@ const ReviewResume = () => {
 
         if(data.success){
           setContent(data.content)
+          toast.success('Resume successfully reviewed!')
         }
         else{
           toast.error(data.message)
@@ -45,7 +46,18 @@ const ReviewResume = () => {
 
             </div>
             <p className='mt-3 text-sm font-medium'>Upload Resume</p>
-            <input onChange={(e)=>setInput(e.target.files[0])} type="file" accept='application/pdf' className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' required />
+            <input 
+              onChange={(e) => {
+                setInput(e.target.files[0])
+                if (e.target.files[0]) {
+                  toast.success('Resume uploaded successfully!')
+                }
+              }} 
+              type="file" 
+              accept='application/pdf' 
+              className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-200 text-gray-600' 
+              required 
+            />
             <p className='text-xs text-gray-500 font-light mt-1'>Supports PDF Resume only</p>
           
           <button disabled={loading} type='submit' className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>

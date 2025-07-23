@@ -7,13 +7,15 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Navbar />
-      <Hero/>
-      <AiTools/>
-      <Plan/>
+      <main className="pt-20">
+        <Hero/>
+        <AiTools/>
+        <Plan/>
+      </main>
       <Footer/>
-    </>
+    </div>
   )
 }
 

@@ -1,4 +1,15 @@
-# React + Vite
+# Creativo - AI Creative Studio
+
+Creativo is a premium AI-powered creative studio that helps users generate, enhance, and optimize creative content with cutting-edge AI technology.
+
+## Features
+
+- **AI Content Creation**: Generate articles, blog titles, and creative content
+- **Image Generation**: Create stunning visuals with AI
+- **Background Removal**: Professional image editing tools
+- **Object Removal**: Advanced image manipulation
+- **Resume Review**: AI-powered resume optimization
+- **Premium UI/UX**: Beautiful, responsive design with glass morphism effects
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

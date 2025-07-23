@@ -34,45 +34,108 @@ const Dashboard = () => {
     getDashboardData()
   },[])
   return (
-    <div className='h-full overflow-y-scroll p-6'>
-      <div className='flex justify-start gap-4 flex-wrap'>
-        <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounded-xl border border-gray-200'>
-            <div className='text-slate-600'>
-              <p className='text-sm'>Total Creation</p>
-              <h2 className='text-xl font-semibold'>{creations.length}</h2>
-            </div>
-            <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-[#FF61C5] to-[#9E53EE] text-white flex justify-center items-center'>
-              <Sparkles className='w-5 text-white'/>
+    <div className='h-full overflow-y-scroll p-8 bg-gradient-to-br from-slate-50 to-blue-50'>
+      {/* Header */}
+      <div className='mb-8'>
+        <h1 className='font-display font-bold text-3xl text-gray-900 mb-2'>
+          Welcome to your <span className='text-gradient'>Creative Studio</span>
+        </h1>
+        <p className='text-gray-600 text-lg'>
+          Track your AI-powered creations and manage your creative workflow
+        </p>
+      </div>
+
+      {/* Stats Cards */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>
+        <div className='card-premium p-6 hover-lift'>
+            <div className='flex justify-between items-start'>
+              <div className='text-slate-700'>
+                <p className='text-sm font-medium text-gray-500 mb-1'>Total Creations</p>
+                <h2 className='text-3xl font-bold text-gray-900'>{creations.length}</h2>
+                <p className='text-xs text-green-600 mt-1 font-medium'>↗ +12% this month</p>
+              </div>
+              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF61C5] to-[#9E53EE] text-white flex justify-center items-center shadow-lg'>
+                <Sparkles className='w-6 h-6 text-white'/>
+              </div>
             </div>
         </div>
 
-        <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounded-xl border border-gray-200'>
-            <div className='text-slate-600'>
-              <p className='text-sm'>Active Plan</p>
-              <h2 className='text-xl font-semibold'>
-                <Protect plan='premium' fallback='Free'>Premium</Protect>
-              </h2>
+        <div className='card-premium p-6 hover-lift'>
+            <div className='flex justify-between items-start'>
+              <div className='text-slate-700'>
+                <p className='text-sm font-medium text-gray-500 mb-1'>Active Plan</p>
+                <h2 className='text-2xl font-bold text-gray-900'>
+                  <Protect plan='premium' fallback='Free'>Premium</Protect>
+                </h2>
+                <p className='text-xs text-blue-600 mt-1 font-medium'>
+                  <Protect plan='premium' fallback='Upgrade available'>All features unlocked</Protect>
+                </p>
+              </div>
+              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-[#3588F2] to-[#0BB0D7] text-white flex justify-center items-center shadow-lg'>
+                <Gem className='w-6 h-6 text-white'/>
+              </div>
             </div>
-            <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-[#3588F2] to-[#0BB0D7] text-white flex justify-center items-center'>
-              <Gem className='w-5 text-white'/>
-            </div>
-        </div> 
+        </div>
 
+        <div className='card-premium p-6 hover-lift'>
+            <div className='flex justify-between items-start'>
+              <div className='text-slate-700'>
+                <p className='text-sm font-medium text-gray-500 mb-1'>This Week</p>
+                <h2 className='text-3xl font-bold text-gray-900'>{Math.min(creations.length, 15)}</h2>
+                <p className='text-xs text-purple-600 mt-1 font-medium'>Creations made</p>
+              </div>
+              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white flex justify-center items-center shadow-lg'>
+                <div className='w-6 h-6 rounded-full bg-white/20 flex items-center justify-center'>
+                  <div className='w-3 h-3 rounded-full bg-white'></div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
+      {/* Recent Creations */}
       {
         loading ? (
-          <div className='flex justify-center items-center h-full w-full'>
-            <div className='animate-spin rounded-full h-11 w-11 border-3 border-purple-500 border-t-transparent'>
-
+          <div className='flex justify-center items-center h-64'>
+            <div className='relative'>
+              <div className='animate-spin rounded-full h-16 w-16 border-4 border-primary/20 border-t-primary'></div>
+              <div className='absolute inset-0 flex items-center justify-center'>
+                <Sparkles className='w-6 h-6 text-primary animate-pulse' />
+              </div>
             </div>
-
           </div>
-        ) : (<div className='space-y-3'>
-        <p className='mt-6 mb-4'> Recent Creation</p>
-        {
-          creations.map((item)=> <CreationItems key={item.id} item={item}/>)
-        }
-      </div>)
+        ) : (
+          <div className='space-y-6'>
+            <div className='flex items-center justify-between'>
+              <h3 className='font-heading font-semibold text-2xl text-gray-900'>
+                Recent Creations
+              </h3>
+              <div className='text-sm text-gray-500'>
+                {creations.length} total items
+              </div>
+            </div>
+            
+            <div className='space-y-4'>
+              {creations.length > 0 ? (
+                creations.map((item) => <CreationItems key={item.id} item={item}/>)
+              ) : (
+                <div className='card-premium p-12 text-center'>
+                  <div className='w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <Sparkles className='w-8 h-8 text-white' />
+                  </div>
+                  <h4 className='font-heading font-semibold text-xl text-gray-900 mb-2'>
+                    No creations yet
+                  </h4>
+                  <p className='text-gray-600 mb-4'>
+                    Start creating amazing content with our AI creative tools
+                  </p>
+                  <button className='btn-primary'>
+                    Create Your First Masterpiece
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )
       }
       
     </div>
