@@ -1,7 +1,9 @@
 # 🎨 Creativo - AI Creative Studio
 
 <div align="center">
+  <div align="center" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px;">
   <img src="client/public/newlogo.png" alt="Creativo Logo" width="120" height="120">
+  </div>
   
   **Next-Generation AI Creative Suite for Content Creation**
   
