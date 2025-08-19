@@ -2,6 +2,7 @@
 
 <div align="center">
   <img src="client/public/newlogo.png" alt="Creativo Logo" width="120" height="120">
+
   
   **Next-Generation AI Creative Suite for Content Creation**
   
