@@ -12,7 +12,8 @@
   [![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF.svg)](https://clerk.dev/)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-  [🚀 Live Demo](https://your-demo-link.com) • [📖 Documentation](docs/) • [🐛 Report Bug](issues/) • [💡 Request Feature](issues/)
+[🚀 Live Demo](https://your-demo-link.com) • [📖 Documentation](docs/) • [🐛 Report Bug](issues/) • [💡 Request Feature](issues/)
+
 </div>
 
 ---
@@ -25,15 +26,19 @@
 <img src="client/public/Screenshot 2025-07-23 220604.png" alt="Creativo Dashboard" width="800">
 
 ### ✨ AI Content Generation
+
 <img src="client/public/Screenshot 2025-07-23 220650.png" alt="AI Content Generation" width="800">
 
 ### 🖼️ Image Editing Tools
+
 <img src="client/public/Screenshot 2025-07-23 220756.png" alt="Image Editing Tools" width="800">
 
 ### 🎨 Creative Templates
+
 <img src="client/public/Screenshot 2025-07-23 220851.png" alt="Creative Templates" width="800">
 
 ### 📤 Export & Share Options
+
 <img src="client/public/Screenshot 2025-07-23 220915.png" alt="Export Options" width="800">
 
 </div>
@@ -43,6 +48,7 @@
 ## 🌟 Features
 
 ### 🤖 AI-Powered Tools
+
 - **📝 Article Writer** - Generate high-quality articles with customizable length
 - **📰 Blog Title Generator** - Create engaging blog titles for any niche
 - **🎨 AI Image Generator** - Generate stunning images with multiple art styles
@@ -51,6 +57,7 @@
 - **📄 Resume Reviewer** - Get AI-powered feedback on your resume
 
 ### 🎯 User Experience
+
 - **🔐 Secure Authentication** - Powered by Clerk for seamless login/logout
 - **📱 Responsive Design** - Perfect experience across all devices
 - **🎨 Modern UI/UX** - Beautiful gradient designs and smooth animations
@@ -59,6 +66,7 @@
 - **🌙 Premium Styling** - Professional gradients and hover effects
 
 ### 🛠️ Technical Features
+
 - **⚡ Lightning Fast** - Built with Vite for optimal performance
 - **📦 Component-Based** - Modular React architecture
 - **🎨 Tailwind CSS** - Utility-first styling framework
@@ -101,6 +109,7 @@ creativo/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - **Node.js** (v18 or higher)
 - **npm** or **yarn**
 - **Git**
@@ -112,12 +121,14 @@ creativo/
 ### 📦 Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/PrashantKumarD/new-saas-app.git
    cd new-saas-app
    ```
 
 2. **Install dependencies**
+
    ```bash
    # Install client dependencies
    cd client
@@ -129,16 +140,18 @@ creativo/
    ```
 
 3. **Environment Setup**
-   
+
    Create `.env` files in both client and server directories:
 
    **Client (.env)**
+
    ```env
    VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
    VITE_BASE_URL=http://localhost:3000
    ```
 
    **Server (.env)**
+
    ```env
    PORT=3000
    DATABASE_URL=your_neon_database_url
@@ -150,6 +163,7 @@ creativo/
    ```
 
 4. **Start Development Servers**
+
    ```bash
    # Terminal 1 - Start backend server
    cd server
@@ -171,6 +185,7 @@ creativo/
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **⚛️ React 19.1.0** - Modern React with latest features
 - **🎨 Tailwind CSS 4.1.11** - Utility-first CSS framework
 - **🧭 React Router Dom 7.7.0** - Client-side routing
@@ -180,6 +195,7 @@ creativo/
 - **⚡ Vite** - Lightning-fast build tool
 
 ### Backend
+
 - **🟢 Node.js** - JavaScript runtime
 - **🚀 Express 5.1.0** - Web application framework
 - **🤖 OpenAI 5.10.1** - AI model integration
@@ -188,11 +204,13 @@ creativo/
 - **📤 Multer 2.0.2** - File upload handling
 
 ### Database & Services
+
 - **🐘 Neon PostgreSQL** - Serverless PostgreSQL
 - **🔐 Clerk** - Authentication & user management
 - **📊 Axios 1.10.0** - HTTP client
 
 ### Development Tools
+
 - **📏 ESLint** - Code linting
 - **🔄 Nodemon** - Development auto-reload
 - **🔧 Vite Plugin React** - React integration
@@ -202,12 +220,14 @@ creativo/
 ## 📋 API Endpoints
 
 ### 🔐 Authentication
+
 All endpoints require authentication via Clerk JWT tokens.
 
 ### 🤖 AI Generation Routes
+
 ```
 POST /api/ai/generate-article      # Generate articles
-POST /api/ai/generate-blog-title   # Generate blog titles  
+POST /api/ai/generate-blog-title   # Generate blog titles
 POST /api/ai/generate-image        # Generate AI images
 POST /api/ai/remove-image-background # Remove backgrounds
 POST /api/ai/remove-image-object   # Remove objects
@@ -215,6 +235,7 @@ POST /api/ai/resume-review         # Review resumes
 ```
 
 ### 👤 User Routes
+
 ```
 GET  /api/user/credits            # Get user credits
 POST /api/user/verify-payment     # Verify payments
@@ -225,6 +246,7 @@ POST /api/user/verify-payment     # Verify payments
 ## 🎨 UI Components
 
 ### 🧩 Component Library
+
 - **Navbar** - Transparent navigation with auth integration
 - **Sidebar** - Dashboard navigation with user profile
 - **Hero** - Landing page with interactive screenshot gallery
@@ -232,6 +254,7 @@ POST /api/user/verify-payment     # Verify payments
 - **Toast System** - Success/error notifications for all actions
 
 ### 🎭 Design System
+
 - **Colors** - Primary blue gradient theme
 - **Typography** - Modern font hierarchy
 - **Spacing** - Consistent padding/margin system
@@ -244,18 +267,19 @@ POST /api/user/verify-payment     # Verify payments
 
 ### 🌐 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_CLERK_PUBLISHABLE_KEY` | Clerk authentication key | ✅ |
-| `VITE_BASE_URL` | Backend API URL | ✅ |
-| `DATABASE_URL` | Neon PostgreSQL connection | ✅ |
-| `CLERK_SECRET_KEY` | Clerk server secret | ✅ |
-| `OPENAI_API_KEY` | OpenAI API access | ✅ |
-| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name | ✅ |
-| `CLOUDINARY_API_KEY` | Cloudinary API key | ✅ |
-| `CLOUDINARY_API_SECRET` | Cloudinary API secret | ✅ |
+| Variable                     | Description                | Required |
+| ---------------------------- | -------------------------- | -------- |
+| `VITE_CLERK_PUBLISHABLE_KEY` | Clerk authentication key   | ✅       |
+| `VITE_BASE_URL`              | Backend API URL            | ✅       |
+| `DATABASE_URL`               | Neon PostgreSQL connection | ✅       |
+| `CLERK_SECRET_KEY`           | Clerk server secret        | ✅       |
+| `OPENAI_API_KEY`             | OpenAI API access          | ✅       |
+| `CLOUDINARY_CLOUD_NAME`      | Cloudinary cloud name      | ✅       |
+| `CLOUDINARY_API_KEY`         | Cloudinary API key         | ✅       |
+| `CLOUDINARY_API_SECRET`      | Cloudinary API secret      | ✅       |
 
 ### 🏗️ Build Configuration
+
 - **Vite Config** - Optimized for React development
 - **Tailwind Config** - Custom design system
 - **ESLint Config** - Code quality rules
@@ -265,6 +289,7 @@ POST /api/user/verify-payment     # Verify payments
 ## 🚀 Deployment
 
 ### 📤 Frontend (Vercel)
+
 ```bash
 cd client
 npm run build
@@ -272,6 +297,7 @@ npm run build
 ```
 
 ### 🖥️ Backend (Railway/Heroku)
+
 ```bash
 cd server
 npm start
@@ -279,6 +305,7 @@ npm start
 ```
 
 ### 🌍 Environment Setup
+
 1. Set up production environment variables
 2. Configure database connections
 3. Set up Cloudinary media storage
@@ -308,6 +335,7 @@ We welcome contributions! Please follow these steps:
 7. **🔀 Open a Pull Request**
 
 ### 📋 Development Guidelines
+
 - Follow existing code style
 - Add tests for new features
 - Update documentation
@@ -349,6 +377,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **⭐ Star this repository if you found it helpful!**
 
-*Made with ❤️ by the Creativo Team*
+_Made with ❤️ by the Creativo Team_
 
 </div>
