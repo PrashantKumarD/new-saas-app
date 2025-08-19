@@ -22,25 +22,23 @@
 ## 📸 Preview Gallery
 
 <div align="center">
+
   
 ### 🏠 Dashboard Overview
-<img src="client/public/Screenshot 2025-07-23 220604.png" alt="Creativo Dashboard" width="800">
+<img src="client/public/Screenshot 2025-08-19 191414.png" alt="Write Article" width="800">
 
 ### ✨ AI Content Generation
 
-<img src="client/public/Screenshot 2025-07-23 220650.png" alt="AI Content Generation" width="800">
+<img src="client/public/Screenshot 2025-08-19 191545.png" alt="Image Editing Tools" width="800">
 
 ### 🖼️ Image Editing Tools
 
-<img src="client/public/Screenshot 2025-07-23 220756.png" alt="Image Editing Tools" width="800">
+<img src="client/public/Screenshot 2025-08-19 191633.png" alt="Review Resume" width="800">
 
 ### 🎨 Creative Templates
 
-<img src="client/public/Screenshot 2025-07-23 220851.png" alt="Creative Templates" width="800">
+<img src="client/public/Screenshot 2025-08-19 191707.png" alt="Community" width="800">
 
-### 📤 Export & Share Options
-
-<img src="client/public/Screenshot 2025-07-23 220915.png" alt="Export Options" width="800">
 
 </div>
 
