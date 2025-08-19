@@ -8,10 +8,10 @@ const Hero = () => {
 
   // Screenshots data with main image first
   const screenshots = [
-    { src: "/Screenshot 2025-08-19 191414.png", alt: "AI Dashboard Overview" },
-    { src: "/Screenshot 2025-08-19 191545.png", alt: "Content Creation Tools" },
-    { src: "/Screenshot 2025-08-19 191633.png", alt: "AI Image Generation" },
-    { src: "/Screenshot 2025-08-19 191707.png", alt: "Creative Workspace" },
+    { src: "/Screenshot 2025-08-19 191414.png", alt: "Write Article" },
+    { src: "/Screenshot 2025-08-19 191545.png", alt: "AI Image Generation" },
+    { src: "/Screenshot 2025-08-19 191633.png", alt: "Review Resume" },
+    { src: "/Screenshot 2025-08-19 191707.png", alt: "Community" },
   ];
 
   const [activeScreenshot, setActiveScreenshot] = useState(0);
