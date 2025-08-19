@@ -4,3 +4,31 @@
 .reset-tw, .reset-tw * {
   all: revert !important;
 }
+
+/* Ensure Clerk modals appear in front with maximum z-index */
+[data-clerk-modal],
+[data-clerk-modal] *,
+.cl-modal,
+.cl-modalContent,
+.cl-modalBackdrop,
+.cl-card,
+.cl-overlay,
+.cl-internal-modal,
+.cl-rootBox,
+div[data-portal="true"] {
+  z-index: 99999 !important;
+  position: relative !important;
+}
+
+/* Clerk pricing table specific styling */
+.cl-pricingTable,
+.cl-pricingTable * {
+  z-index: 99999 !important;
+  position: relative !important;
+}
+
+
+
+.reset-tw, .reset-tw * {
+  all: revert !important;
+}

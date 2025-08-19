@@ -4,8 +4,8 @@ import { Crown, Zap, Star } from "lucide-react";
 
 const Plan = () => {
   return (
-    <section className="py-24 px-6 sm:px-12 xl:px-20 bg-purple-100 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative z-10">
+    <section className="py-24 px-6 sm:px-12 xl:px-20 bg-purple-100 relative">
+      <div className="max-w-4xl mx-auto relative">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full mb-6">
@@ -19,7 +19,6 @@ const Plan = () => {
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Start free and upgrade when you need more stuff.
-            
           </p>
         </div>
 
@@ -65,9 +64,29 @@ const Plan = () => {
         </div>
 
         {/* Pricing Table Container */}
-        <div className="relative">
-          <div className="bg-white p-8 border border-gray-200 rounded-lg">
-            <PricingTable />
+        <div style={{ position: "relative", zIndex: 99999 }}>
+          <div
+            className="bg-white p-8 border border-gray-200 rounded-lg"
+            style={{ position: "relative", zIndex: 99999 }}
+          >
+            <PricingTable
+              appearance={{
+                elements: {
+                  card: "relative",
+                  modal: "fixed",
+                  modalContent: "relative",
+                  modalBackdrop: "fixed",
+                },
+                variables: {
+                  zIndexModal: 99999,
+                },
+              }}
+              options={{
+                modal: {
+                  zIndex: 99999,
+                },
+              }}
+            />
           </div>
         </div>
 

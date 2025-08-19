@@ -8,11 +8,10 @@ const Hero = () => {
 
   // Screenshots data with main image first
   const screenshots = [
-    { src: "/Screenshot 2025-07-23 220604.png", alt: "Creativo Dashboard" },
-    { src: "/Screenshot 2025-07-23 220650.png", alt: "AI Content Generation" },
-    { src: "/Screenshot 2025-07-23 220756.png", alt: "Image Editing Tools" },
-    { src: "/Screenshot 2025-07-23 220851.png", alt: "Creative Templates" },
-    { src: "/Screenshot 2025-07-23 220915.png", alt: "Export Options" },
+    { src: "/Screenshot 2025-08-19 191414.png", alt: "AI Dashboard Overview" },
+    { src: "/Screenshot 2025-08-19 191545.png", alt: "Content Creation Tools" },
+    { src: "/Screenshot 2025-08-19 191633.png", alt: "AI Image Generation" },
+    { src: "/Screenshot 2025-08-19 191707.png", alt: "Creative Workspace" },
   ];
 
   const [activeScreenshot, setActiveScreenshot] = useState(0);
@@ -47,7 +46,8 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
-              Use our AI tools to make images, videos, and more. No need to be a pro.
+              Use our AI tools to make images, videos, and more. No need to be a
+              pro.
               <span className="block mt-2 font-medium text-gray-800">
                 Just type what you want and we'll help you make it happen.
               </span>
