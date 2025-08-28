@@ -1,13 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets";
-import {
-  Github,
-  Twitter,
-  Linkedin,
-  Mail,
-  Heart,
-  ExternalLink,
-} from "lucide-react";
+
 
 const Footer = () => {
   return (
@@ -17,12 +9,13 @@ const Footer = () => {
           <span className="font-bold text-2xl text-gray-900">Creativo</span>
         </div>
         <p className="text-gray-600 text-center max-w-xl text-sm leading-relaxed">
-          Made this to help people make stuff with AI. Hope it's useful!
+          Made this to help for the people to make things with AI.
+          <br /> Do connect!
         </p>
       </div>
       <div className="border-t border-gray-200">
-        <div className="text-gray-500 max-w-7xl mx-auto px-6 py-4 text-center text-sm">
-          Made with ❤️ in 2025
+        <div className="text-gray-500 max-w-7xl mx-auto px-6 py-2 text-center text-sm">
+          🧑 Prashant Kumar Dwebedi <br/>📧 kumarprashant6080@gmail.com
         </div>
       </div>
     </footer>

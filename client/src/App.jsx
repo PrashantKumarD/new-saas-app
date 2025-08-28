@@ -1,54 +1,52 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Layout from './pages/Layout'
-import Dashboard from './pages/Dashboard'
-import WriteArticle from './pages/WriteArticle'
-import BlogTitles from './pages/BlogTitles'
-import GenerateImages from './pages/GenerateImages'
-import RemoveBackground from './pages/RemoveBackground'
-import RemoveObject from './pages/RemoveObject'
-import ReviewResume from './pages/ReviewResume'
-import Community from './pages/Community'
-import { useAuth } from '@clerk/clerk-react'
-import { useEffect, useRef } from 'react'
-import {Toaster} from 'react-hot-toast'
-import toast from 'react-hot-toast'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+// import Dashboard from './pages/Dashboard'
+import WriteArticle from "./pages/WriteArticle";
+import BlogTitles from "./pages/BlogTitles";
+import GenerateImages from "./pages/GenerateImages";
+import RemoveBackground from "./pages/RemoveBackground";
+import RemoveObject from "./pages/RemoveObject";
+import ReviewResume from "./pages/ReviewResume";
+import { useAuth } from "@clerk/clerk-react";
+import { useEffect, useRef } from "react";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const App = () => {
-  const { isSignedIn } = useAuth()
-  const prevSignedIn = useRef(isSignedIn)
+  const { isSignedIn } = useAuth();
+  const prevSignedIn = useRef(isSignedIn);
 
   useEffect(() => {
     // Check if user just signed in (was not signed in before, now is signed in)
     if (!prevSignedIn.current && isSignedIn) {
-      toast.success('Successfully logged in!')
+      toast.success("Successfully logged in!");
     }
     // Check if user just signed out (was signed in before, now is not signed in)
     if (prevSignedIn.current && !isSignedIn) {
-      toast.success('Successfully signed out!')
+      toast.success("Successfully signed out!");
     }
-    prevSignedIn.current = isSignedIn
-  }, [isSignedIn])
+    prevSignedIn.current = isSignedIn;
+  }, [isSignedIn]);
 
   return (
     <div>
-      <Toaster/>
+      <Toaster />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/ai' element={<Layout/>}>
-          <Route index element={<Dashboard/>} />
-          <Route path='write-article' element={<WriteArticle/>} />
-          <Route path='blog-titles' element={<BlogTitles/>} />
-          <Route path='generate-images' element={<GenerateImages/>} />
-          <Route path='remove-background' element={<RemoveBackground/>} />
-          <Route path='remove-object' element={<RemoveObject/>} />
-          <Route path='review-resume' element={<ReviewResume/>} />
-          <Route path='community' element={<Community/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/ai" element={<Layout />}>
+          <Route index element={<WriteArticle />} />
+          <Route path="write-article" element={<WriteArticle />} />
+          <Route path="blog-titles" element={<BlogTitles />} />
+          <Route path="generate-images" element={<GenerateImages />} />
+          <Route path="remove-background" element={<RemoveBackground />} />
+          <Route path="remove-object" element={<RemoveObject />} />
+          <Route path="review-resume" element={<ReviewResume />} />
         </Route>
       </Routes>
     </div>
-  ) 
-}
+  );
+};
 
-export default App
+export default App;

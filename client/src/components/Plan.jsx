@@ -7,7 +7,7 @@ const Plan = () => {
     <section className="py-24 px-6 sm:px-12 xl:px-20 bg-purple-100 relative">
       <div className="max-w-4xl mx-auto relative">
         {/* Section Header */}
-        <div className="text-center mb-16 fade-in-up">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full mb-6">
             <Crown className="w-4 h-4 text-cyan-600" />
             <span className="text-cyan-600 font-medium text-sm">Pricing</span>
@@ -64,33 +64,14 @@ const Plan = () => {
         </div>
 
         {/* Pricing Table Container */}
-        <div style={{ position: "relative", zIndex: 99999 }}>
+        <div >
           <div
             className="bg-white p-8 border border-gray-200 rounded-lg"
-            style={{ position: "relative", zIndex: 99999 }}
+            
           >
-            <PricingTable
-              appearance={{
-                elements: {
-                  card: "relative",
-                  modal: "fixed",
-                  modalContent: "relative",
-                  modalBackdrop: "fixed",
-                },
-                variables: {
-                  zIndexModal: 99999,
-                },
-              }}
-              options={{
-                modal: {
-                  zIndex: 99999,
-                },
-              }}
-            />
+            <PricingTable/>
           </div>
         </div>
-
-        {/* Trust indicators */}
       </div>
     </section>
   );

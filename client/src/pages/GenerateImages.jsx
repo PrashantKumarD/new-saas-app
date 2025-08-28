@@ -20,7 +20,6 @@ const GenerateImages = () => {
 
   const [selectedStyle, setSelectedStyle] = useState("Realistic");
   const [input, setInput] = useState("");
-  const [publish, setPublish] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [content, setContent] = useState("");
@@ -34,7 +33,7 @@ const GenerateImages = () => {
 
       const { data } = await axios.post(
         "/api/ai/generate-image",
-        { prompt, publish },
+        { prompt },
         {
           headers: { Authorization: `Bearer ${await getToken()}` },
         }
@@ -88,19 +87,6 @@ const GenerateImages = () => {
               </span>
             ))}
           </div>
-          <div className="my-6 flex items-center  gap-2">
-            <label className="relative cursor-pointer">
-              <input
-                type="checkbox"
-                onChange={(e) => setPublish(e.target.checked)}
-                checked={publish}
-                className="sr-only peer"
-              />
-              <div className="w-9 h-5 bg-slate-300 rounded-full peer-checked:bg-green-500 transistion"></div>
-              <span className="absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition peer-checked:translate-x-4"></span>
-            </label>
-            <p className="text-sm">Make this image Public</p>
-          </div>
           <button
             disabled={loading}
             className="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer transition-colors"
@@ -109,7 +95,7 @@ const GenerateImages = () => {
               <span className="w-4 h-4 my-1 rounded-full border-2 border-t-transparent animate-spin"></span>
             ) : (
               <Image className="w-5" />
-            )}{" "}
+            )}
             Generate Image
           </button>
         </form>

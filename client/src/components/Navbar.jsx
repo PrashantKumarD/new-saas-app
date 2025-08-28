@@ -1,5 +1,4 @@
 import React from "react";
-import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
@@ -12,8 +11,8 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
-      <div className="flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+    <nav className="fixed top-0 z-1000 w-full bg-white border-b border-gray-200">
+      <div className="flex justify-between items-center px-6 py-3 mx-auto">
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}

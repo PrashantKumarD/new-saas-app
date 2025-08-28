@@ -6,7 +6,6 @@ import {
   House,
   Scissors,
   SquarePen,
-  Users,
   Image,
   LogOut,
 } from "lucide-react";
@@ -15,28 +14,23 @@ import { NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const navItems = [
-  { to: "/ai", label: "Dashboard", Icon: House },
+  // { to: "/ai", label: "Dashboard", Icon: House },
   { to: "/ai/write-article", label: "Write Article", Icon: SquarePen },
   { to: "/ai/blog-titles", label: "Blog Titles", Icon: Hash },
   { to: "/ai/generate-images", label: "Generate Images", Icon: Image },
   { to: "/ai/remove-background", label: "Remove Background", Icon: Eraser },
   { to: "/ai/remove-object", label: "Remove Object", Icon: Scissors },
   { to: "/ai/review-resume", label: "Review Resume", Icon: FileText },
-  { to: "/ai/community", label: "Community", Icon: Users },
 ];
 
-const Sidebar = ({ sidebar, setSidebar }) => {
+const Sidebar = () => {
   const { user } = useUser();
   const { signOut, openUserProfile } = useClerk();
 
   if (!user) return null;
 
   return (
-    <div
-      className={`w-64 bg-white border-r border-gray-200 flex flex-col justify-between items-center max-sm:absolute top-14 bottom-0 ${
-        sidebar ? "translate-x-0" : "max-sm:-translate-x-full"
-      } transition-all duration-300 ease-in-out`}
-    >
+    <div className="w-64 bg-white border-r border-gray-200 flex flex-col justify-between items-center h-full">
       <div className="my-6 w-full px-4">
         {/* User Profile Section */}
         <div className="text-center mb-6">
@@ -64,7 +58,6 @@ const Sidebar = ({ sidebar, setSidebar }) => {
               key={to}
               to={to}
               end={to === "/ai"}
-              onClick={() => setSidebar(false)}
               className={({ isActive }) =>
                 `px-3 py-2 flex items-center gap-3 rounded transition-colors duration-150
                 ${
